@@ -1,0 +1,37 @@
+{
+  "name": "@dj-lib/utils",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "./dist/umd/utils.umd.js",
+  "module": "./dist/es/index.mjs",
+  "types": "./dist/es/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/es/index.d.ts",
+      "import": "./dist/es/index.mjs",
+      "require": "./dist/umd/utils.umd.js"
+    },
+    "./*": "./dist/es/*.mjs"
+  },
+  "files": [
+    "dist"
+  ],
+  "author": "dj lib Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "directory": "packages/utils"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "clean": "rimraf dist .turbo",
+    "lint": "eslint . --ext .js,.ts",
+    "lint:fix": "eslint . --ext .js,.ts --fix",
+    "format": "prettier --write \"src/**/*.{js,ts,json}\"",
+    "format:check": "prettier --check \"src/**/*.{js,ts,json}\""
+  },
+  "peerDependencies": {
+    "lodash-es": "^4.17.21"
+  }
+}

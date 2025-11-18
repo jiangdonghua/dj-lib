@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@dj-lib/ui": ["../packages/ui/src"],
+      "@dj-lib/shared": ["../packages/shared/src"],
+      "@dj-lib/utils": ["../packages/utils/src"],
+      "@dj-lib/controls-sdk": ["../packages/controls-sdk/src"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.vue", "**/*.tsx", ".vitepress/**/*.ts", ".vitepress/**/*.vue"]
+}

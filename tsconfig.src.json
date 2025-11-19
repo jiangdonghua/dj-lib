@@ -1,10 +1,4 @@
 ﻿{
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "composite": true,
-    "lib": ["ESNext", "DOM", "DOM.Iterable"],
-    "types": ["node"]
-  },
-  "include": ["typings/env.d.ts", "packages/**/src", "packages/web-ui/packages/**/*"],
-  "exclude": ["**/*.config.*"]
+  "extends": "./tsconfig.json",
+  "include": ["typings/**/*", "packages/*/src/**/*", "packages/web-ui/packages/**/*"]
 }

@@ -8,13 +8,6 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "types": ["vite/client", "node"]
   },
-  "include": [
-    "src/**/*",
-    "*.ts",
-    "*.js"
-  ],
-  "exclude": [
-    "dist",
-    "node_modules"
-  ]
+  "include": ["src/**/*", "*.ts", "*.js"],
+  "exclude": ["dist", "node_modules"]
 }

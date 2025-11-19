@@ -8,10 +8,10 @@
     "clean": "rimraf dist .turbo",
     "lint": "eslint . --ext .js,.ts,.vue",
     "lint:fix": "eslint . --ext .js,.ts,.vue --fix",
-    "lint:style": "stylelint \"src/**/*.{css,scss,vue}\"",
-    "lint:style:fix": "stylelint \"src/**/*.{css,scss,vue}\" --fix",
-    "format": "prettier --write \"src/**/*.{js,ts,vue,css,scss,json}\"",
-    "format:check": "prettier --check \"src/**/*.{js,ts,vue,css,scss,json}\""
+    "lint:style": "stylelint \"packages/**/*.{css,scss,vue}\"",
+    "lint:style:fix": "stylelint \"packages/**/*.{css,scss,vue}\" --fix",
+    "format": "prettier --write \"packages/**/*.{js,ts,vue,css,scss,json}\"",
+    "format:check": "prettier --check \"packages/**/*.{js,ts,vue,css,scss,json}\""
   },
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",

@@ -26,12 +26,7 @@ const commonServerConfig = {
  * 用于打包 Vue 组件，生成单文件 ES 和 UMD 格式
  */
 export function generateVueConfig(options: BuildOptions = {}): UserConfig {
-  const {
-    name = 'Library',
-    entry = './packages/index.ts',
-    external = [],
-    globals = {},
-  } = options
+  const { name = 'Library', entry = './packages/index.ts', external = [], globals = {} } = options
 
   return {
     server: commonServerConfig,

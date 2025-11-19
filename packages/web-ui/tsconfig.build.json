@@ -1,12 +1,4 @@
 {
-  "extends": "../../tsconfig.src.json",
-  "compilerOptions": {
-    "rootDir": ".",
-    "baseUrl": "./",
-    "outDir": "./dist",
-    "paths": {
-      "@ui/*": ["packages/*"]
-    }
-  },
-  "include": ["packages"]
+  "extends": ["./tsconfig.json", "../../tsconfig.build.base.json"],
+  "include": ["packages/**/*", "../shared/src/**/*", "../utils/src/**/*", "../../typings/**/*", "./vue.d.ts"]
 }

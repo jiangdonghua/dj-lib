@@ -1,14 +1,12 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
-    "baseUrl": ".",
+    "composite": true,
     "paths": {
-      "@dj-lib/shared": ["../shared/dist/es"],
-      "@dj-lib/utils": ["../utils/dist/es"]
-    },
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "types": ["vite/client", "node"]
+      "@/*": ["packages/*"],
+      "@dj-lib/shared": ["../shared/src"],
+      "@dj-lib/utils": ["../utils/src"]
+    }
   },
-  "include": ["packages/**/*", "../../packages/shared/dist/es/**/*", "../../packages/utils/dist/es/**/*"],
-  "exclude": ["dist", "node_modules"]
+  "include": ["packages/**/*", "../shared/src/**/*", "../utils/src/**/*", "../../typings/**/*"]
 }

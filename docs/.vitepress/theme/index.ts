@@ -2,6 +2,9 @@
 import DefaultTheme from 'vitepress/theme'
 import Demo from './components/Demo.vue'
 import DemoBlock from './components/DemoBlock.vue'
+import WebUI from '@dj-lib/web-ui'
+// 导入组件库样式
+import '@dj-lib/web-ui/index.css'
 import './custom.css'
 
 // 自动导入所有示例组件
@@ -21,6 +24,9 @@ export default {
   enhanceApp({ app }) {
     app.component('FangDemo', Demo)
     app.component('DemoBlock', DemoBlock)
+
+    // 注册web-ui组件库
+    app.use(WebUI)
 
     // 注册所有示例组件
     Object.keys(components).forEach(key => {

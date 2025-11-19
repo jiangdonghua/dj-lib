@@ -1,26 +1,215 @@
-// Button component styles
-.button-base {
-  display: inline-block;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-radius: var(--en-border-radius);
-  cursor: pointer;
-  transition: all var(--en-transition-duration) ease;
-  text-align: center;
-  text-decoration: none;
+// Button 基础样式
+.en-button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   user-select: none;
-  font-size: var(--en-font-size);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0 12px;
+  height: 32px;
+  line-height: 32px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: var(--en-color-text);
+  border: 1px solid var(--en-color-border);
+  border-radius: var(--en-border-radius);
+  background-color: transparent;
 
-  &:hover {
-    opacity: 0.8;
+  // 尺寸变体
+  &_big {
+    padding: 0 16px;
+    height: 42px;
   }
 
-  &:disabled {
+  &_mini {
+    padding: 0 8px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  // 相邻按钮间距
+  & + .en-button {
+    margin-left: 8px;
+  }
+
+  // 禁用状态
+  &[disabled] {
     cursor: not-allowed;
-    opacity: 0.6;
+    opacity: 0.7;
+  }
+
+  // 图标按钮
+  &__prefix {
+    margin-right: 4px;
+  }
+
+  &__suffix {
+    margin-left: 4px;
+  }
+
+  // 默认样式
+  &.en-button_default {
+    &:hover {
+      color: var(--en-color-primary);
+      border-color: var(--en-color-primary);
+    }
+
+    &[disabled] {
+      color: var(--en-color-text);
+      border-color: var(--en-color-border);
+    }
+  }
+
+  // 按钮类型样式生成器
+  @mixin button-variant($type) {
+    &.en-button_dark.en-button_#{$type} {
+      background-color: var(--en-color-#{$type});
+      border-color: var(--en-color-#{$type});
+      color: #fff;
+
+      &:hover {
+        background-color: var(--en-color-#{$type}-light-3);
+        border-color: var(--en-color-#{$type}-light-3);
+      }
+
+      &[disabled] {
+        background-color: var(--en-color-#{$type});
+        border-color: var(--en-color-#{$type});
+        color: #fff;
+      }
+    }
+
+    &.en-button_light.en-button_#{$type} {
+      background-color: var(--en-color-#{$type}-light-9);
+      border-color: var(--en-color-#{$type}-light-3);
+      color: var(--en-color-#{$type});
+
+      &:hover {
+        background-color: var(--en-color-#{$type});
+        border-color: var(--en-color-#{$type});
+        color: #fff;
+      }
+
+      &[disabled] {
+        background-color: var(--en-color-#{$type}-light-9);
+        border-color: var(--en-color-#{$type}-light-3);
+        color: var(--en-color-#{$type});
+      }
+    }
+
+    &.en-button_plain.en-button_#{$type} {
+      background-color: #fff;
+      border-color: var(--en-color-#{$type}-light-3);
+      color: var(--en-color-#{$type});
+
+      &:hover {
+        background-color: var(--en-color-#{$type});
+        border-color: var(--en-color-#{$type});
+        color: #fff;
+      }
+
+      &[disabled] {
+        background-color: #fff;
+        border-color: var(--en-color-#{$type}-light-3);
+        color: var(--en-color-#{$type});
+      }
+    }
+
+    &.en-button_#{$type} {
+      &:active {
+        background-color: var(--en-color-#{$type}-dark-2);
+        border-color: var(--en-color-#{$type}-dark-2);
+        color: #fff;
+      }
+
+      &.is-text {
+        color: var(--en-color-#{$type});
+
+        &:hover {
+          color: var(--en-color-#{$type}-light-3);
+          background: none;
+        }
+
+        &:active {
+          color: var(--en-color-#{$type}-dark-2);
+          background: none;
+        }
+
+        &[disabled] {
+          color: var(--en-color-#{$type});
+        }
+      }
+    }
+  }
+
+  // 应用按钮类型样式
+  @include button-variant('primary');
+  @include button-variant('success');
+  @include button-variant('warning');
+  @include button-variant('error');
+  @include button-variant('info');
+
+  // 文字按钮
+  &.is-text {
+    padding: 0;
+    border: none;
+    background: none;
+    height: auto;
+    line-height: inherit;
+
+    &.is-disabled {
+      background: none;
+    }
   }
 }
 
-.button-component {
-  // Base button styles will be defined here
+// 按钮组
+.en-button-group {
+  display: inline-flex;
+  vertical-align: middle;
+
+  .en-button + .en-button {
+    margin-left: -1px;
+  }
+
+  .en-button {
+    border-radius: 0;
+
+    &:hover {
+      z-index: 2;
+    }
+
+    &:first-child {
+      border-top-left-radius: var(--en-border-radius);
+      border-bottom-left-radius: var(--en-border-radius);
+    }
+
+    &:last-child {
+      border-top-right-radius: var(--en-border-radius);
+      border-bottom-right-radius: var(--en-border-radius);
+    }
+
+    &.is-text + .en-button {
+      margin-left: 8px;
+    }
+  }
+}
+
+// 内容按钮组
+.en-button-group_content {
+  margin: 0 -12px;
+
+  .en-button {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    padding: 0 16px;
+    height: 32px;
+
+    &:hover {
+      background: var(--en-color-primary-light-9);
+    }
+  }
 }

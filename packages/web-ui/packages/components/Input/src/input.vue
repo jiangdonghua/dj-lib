@@ -21,6 +21,10 @@
 import { ref } from 'vue'
 import { useNamespace } from '@dj-lib/utils'
 
+defineOptions({
+  name: useNamespace('input').toString(),
+})
+
 // 定义Props
 interface Props {
   modelValue?: string | number

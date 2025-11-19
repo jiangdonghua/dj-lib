@@ -20,7 +20,7 @@ export default defineConfig({
     },
     resolve: {
       alias: {
-        '@dj-lib/web-ui': resolve(__dirname, '../../packages/web-ui/packages'),
+        '@dj-lib/web-ui': resolve(__dirname, '../../packages/web-ui/dist'),
         '@dj-lib/utils': resolve(__dirname, '../../packages/utils/src'),
         '@dj-lib/shared': resolve(__dirname, '../../packages/shared/src'),
       },
@@ -29,6 +29,7 @@ export default defineConfig({
       preprocessorOptions: {
         scss: {
           api: 'modern-compiler',
+          additionalData: "@use '@dj-lib/shared/theme' as *;\n",
         },
       },
     },
@@ -64,6 +65,7 @@ export default defineConfig({
           items: [
             { text: '组件总览', link: '/components/' },
             { text: 'Button 按钮', link: '/components/button' },
+            { text: 'Form 表单', link: '/components/form' },
           ],
         },
       ],

@@ -6,31 +6,41 @@
 
 包含输入框、选择器、单选框、多选框等表单项的表单。
 
-<preview path="../examples/form/basic.vue" />
+:::demo
+form/basic
+:::
 
 ## 行内表单
 
 设置 `inline` 属性可以让表单域变为行内的表单域。
 
-<preview path="../examples/form/inline.vue" />
+:::demo
+form/inline
+:::
 
 ## 对齐方式
 
 通过设置 `label-position` 属性可以改变表单域标签的位置，可选值为 `top`、`left`，当设为 `top` 时标签会置于表单域的顶部。
 
-<preview path="../examples/form/label-position.vue" />
+:::demo
+form/label-position
+:::
 
 ## 表单验证
 
 在防止用户犯错的前提下，尽可能让用户更早地发现并纠正错误。
 
-<preview path="../examples/form/validation.vue" />
+:::demo
+form/validation
+:::
 
 ## 自定义校验规则
 
 这个例子中展示了如何使用自定义验证规则来完成密码的二次验证。
 
-<preview path="../examples/form/custom-validation.vue" />
+:::demo
+form/custom-validation
+:::
 
 ## 属性
 

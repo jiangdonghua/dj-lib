@@ -1,0 +1,29 @@
+.op-icon {
+  position: relative;
+  display: inline-flex;
+  box-sizing: content-box;
+  align-items: center;
+  justify-content: center;
+  width: 1em;
+  height: 100%;
+  line-height: 1em;
+  fill: currentcolor;
+  color: inherit;
+  font-size: inherit;
+  vertical-align: -0.125em;
+
+  svg {
+    width: 1em;
+    height: 1em;
+  }
+
+  &.is-loading {
+    animation: rotating 2s linear infinite;
+  }
+}
+
+.op-icon_span {
+  .op-icon {
+    margin-right: 4px;
+  }
+}

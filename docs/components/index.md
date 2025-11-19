@@ -7,6 +7,11 @@ web-ui 是一套基于 Vue 3 的企业级 UI 组件库。
 ### 基础组件
 
 - [Button 按钮](/components/button) - 常用的操作按钮
+- [Input 输入框](/components/input) - 基础的输入框组件
+
+### 表单组件
+
+- [Form 表单](/components/form) - 数据录入、校验等操作的表单组件
 
 ## 即将推出
 

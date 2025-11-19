@@ -32,6 +32,8 @@ export default defineConfig([
         alert: 'readonly',
         MouseEvent: 'readonly',
         Event: 'readonly',
+        FocusEvent: 'readonly',
+        HTMLInputElement: 'readonly',
         setTimeout: false,
         clearTimeout: false,
         setInterval: false,

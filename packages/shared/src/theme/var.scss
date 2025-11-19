@@ -1,0 +1,73 @@
+$typeArr: primary, success, error, info, warning, ing;
+
+// 组件前缀
+$prefix: 'en-';
+
+// 一行超出省略
+@mixin ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+// 多行超出省略
+@mixin ellipsis-multi($value) {
+  white-space: normal;
+  word-break: break-word;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: $value;
+  -webkit-box-orient: vertical;
+}
+
+.clearfix {
+  &::before,
+  &::after {
+    content: ' ';
+    display: block;
+  }
+
+  &::after {
+    clear: both;
+  }
+}
+
+.scrollbar {
+  position: relative;
+  transform: translateZ(0);
+  overflow: auto;
+
+  &::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+
+  &::-webkit-scrollbar-track {
+    border-radius: 8px;
+    background-color: rgb(0 0 0 / 0%);
+  }
+
+  &::-webkit-scrollbar-track:hover {
+    background-color: rgb(0 0 0 / 6%);
+  }
+
+  &::-webkit-scrollbar-track:active {
+    background-color: rgb(0 0 0 / 10%);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: rgb(0 0 0 / 0%);
+  }
+
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: rgb(0 0 0 / 10%);
+    }
+  }
+
+  &::-webkit-scrollbar-thumb:active {
+    background-color: rgb(0 0 0 / 60%);
+  }
+}

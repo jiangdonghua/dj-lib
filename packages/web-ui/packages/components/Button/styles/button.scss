@@ -3,12 +3,13 @@
   display: inline-block;
   padding: 8px 16px;
   border: 1px solid transparent;
-  border-radius: 4px;
+  border-radius: var(--en-border-radius);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all var(--en-transition-duration) ease;
   text-align: center;
   text-decoration: none;
   user-select: none;
+  font-size: var(--en-font-size);
 
   &:hover {
     opacity: 0.8;

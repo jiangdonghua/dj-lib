@@ -11,7 +11,9 @@
       "import": "./dist/es/index.mjs",
       "require": "./dist/umd/shared.umd.js"
     },
-    "./*": "./dist/es/*.mjs"
+    "./*": "./dist/es/*.mjs",
+    "./theme": "./src/theme/index.scss",
+    "./theme/*": "./src/theme/*.scss"
   },
   "files": [
     "dist"

@@ -1,0 +1,89 @@
+// Input component styles
+.en-input {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  font-size: var(--en-font-size);
+  line-height: 1.5;
+  color: var(--en-color-text);
+
+  &__inner {
+    width: 100%;
+    height: 32px;
+    padding: 6px 12px;
+    font-size: inherit;
+    line-height: 1.5;
+    color: inherit;
+    background-color: var(--en-color-white);
+    background-image: none;
+    border: 1px solid var(--en-color-border);
+    border-radius: var(--en-border-radius);
+    outline: none;
+    transition: all var(--en-transition-duration) ease;
+    box-sizing: border-box;
+
+    &::placeholder {
+      color: var(--en-color-text-sub);
+    }
+
+    &:hover {
+      border-color: var(--en-color-border-hover);
+    }
+
+    &:focus {
+      border-color: var(--en-color-primary);
+      outline: none;
+    }
+
+    &:disabled {
+      background-color: var(--en-color-bg-disabled);
+      border-color: var(--en-color-border-disabled);
+      color: var(--en-color-text-disabled);
+      cursor: not-allowed;
+    }
+
+    &:read-only {
+      background-color: var(--en-color-bg-disabled);
+      border-color: var(--en-color-border-disabled);
+      color: var(--en-color-text-disabled);
+    }
+  }
+
+  // 尺寸变体
+  &--small {
+    font-size: var(--en-font-size-sub);
+
+    .en-input__inner {
+      height: 28px;
+      padding: 4px 10px;
+    }
+  }
+
+  &--medium {
+    font-size: var(--en-font-size);
+
+    .en-input__inner {
+      height: 32px;
+      padding: 6px 12px;
+    }
+  }
+
+  &--large {
+    font-size: var(--en-font-size-h4);
+
+    .en-input__inner {
+      height: 40px;
+      padding: 8px 15px;
+    }
+  }
+
+  // 禁用状态
+  &--disabled {
+    .en-input__inner {
+      background-color: var(--en-color-bg-disabled);
+      border-color: var(--en-color-border-disabled);
+      color: var(--en-color-text-disabled);
+      cursor: not-allowed;
+    }
+  }
+}

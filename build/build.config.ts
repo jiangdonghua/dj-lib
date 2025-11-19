@@ -40,6 +40,13 @@ export function generateVueConfig(options: BuildOptions = {}): UserConfig {
         rollupTypes: true, // 合并所有类型声明为单个文件
       }),
     ],
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@use \'@dj-lib/shared/theme\' as *;\n',
+        },
+      },
+    },
     build: {
       lib: {
         entry, // 入口文件

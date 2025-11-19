@@ -1,0 +1,43 @@
+.#{$prefix}form {
+  display: block;
+
+  &--inline {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &--label-top {
+    .#{$prefix}form-item__label {
+      display: block;
+      margin-bottom: 8px;
+    }
+  }
+
+  &--label-left {
+    .#{$prefix}form-item {
+      display: flex;
+      align-items: center;
+
+      .#{$prefix}form-item__label {
+        margin-right: 12px;
+        min-width: 80px;
+        text-align: right;
+      }
+    }
+  }
+
+  &--label-right {
+    .#{$prefix}form-item {
+      display: flex;
+      align-items: center;
+
+      .#{$prefix}form-item__label {
+        margin-right: 12px;
+        min-width: 80px;
+        text-align: left;
+      }
+    }
+  }
+}

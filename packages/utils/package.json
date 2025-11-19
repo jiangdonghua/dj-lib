@@ -31,7 +31,15 @@
     "format": "prettier --write \"src/**/*.{js,ts,json}\"",
     "format:check": "prettier --check \"src/**/*.{js,ts,json}\""
   },
+  "dependencies": {
+    "@types/spark-md5": "^3.0.2",
+    "intersection-observer": "^0.11.0",
+    "resize-observer-polyfill": "^1.5.1",
+    "spark-md5": "^3.0.2",
+    "uuid": "^9.0.1"
+  },
   "peerDependencies": {
-    "lodash-es": "^4.17.21"
+    "lodash-es": "^4.17.21",
+    "vue": "^3.5.22"
   }
 }

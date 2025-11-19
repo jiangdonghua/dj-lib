@@ -22,7 +22,8 @@
       "import": "./dist/index.js",
       "require": "./dist/index.umd.js"
     },
-    "./dist/index.css": "./dist/index.css"
+    "./dist/index.css": "./dist/index.css",
+    "./plugins/*": "./dist/plugins/*.js"
   },
   "files": [
     "dist"

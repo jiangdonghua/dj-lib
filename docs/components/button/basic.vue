@@ -1,11 +1,11 @@
 <template>
   <div class="demo-button-basic">
-    <Button>默认按钮</Button>
+    <en-button>默认按钮</en-button>
   </div>
 </template>
 
 <script setup>
-import { Button } from '@dj-lib/web-ui'
+import { EnButton } from '@dj-lib/web-ui'
 </script>
 
 <style scoped>

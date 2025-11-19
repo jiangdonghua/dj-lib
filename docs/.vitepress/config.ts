@@ -67,12 +67,7 @@ export default defineConfig({
           ],
         },
       ],
-      '/controls-sdk/': [
-        {
-          text: '开始',
-          items: [{ text: '飞控SDK总览', link: '/controls-sdk/' }],
-        },
-      ],
+
       '/utils/': [
         {
           text: '工具函数',
@@ -83,7 +78,7 @@ export default defineConfig({
         },
       ],
     },
-    socialLinks: [{ icon: 'github', link: 'https://github.com/your-org/fang-common' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/dj-lib/' }],
     search: {
       provider: 'local',
     },

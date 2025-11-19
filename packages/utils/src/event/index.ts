@@ -1,2 +1,2 @@
-export * from './resource';
-export * from './mouse';
+export * from './resource'
+export * from './mouse'

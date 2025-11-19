@@ -30,6 +30,8 @@ export default defineConfig([
         document: 'readonly',
         console: 'readonly',
         alert: 'readonly',
+        MouseEvent: 'readonly',
+        Event: 'readonly',
         setTimeout: false,
         clearTimeout: false,
         setInterval: false,
@@ -56,7 +58,7 @@ export default defineConfig([
     },
   },
 
-  // TypeScript 文件配置
+  // TypeScript 文件配置 - 通用配置
   {
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
@@ -64,6 +66,7 @@ export default defineConfig([
       parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
+        project: './tsconfig.src.json',
       },
     },
     plugins: {

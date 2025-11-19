@@ -5,12 +5,12 @@
  * @returns
  */
 export const to = async <T, U = Error>(promise: Promise<T>, errorContext = {}): Promise<[U, undefined] | [null, T]> => {
-	try {
-		const data = await promise;
-		const result: [null, T] = [null, data];
-		return result;
-	} catch (err: any) {
-		const result: [U, undefined] = [Object.assign({}, err, errorContext), undefined];
-		return result;
-	}
-};
+  try {
+    const data = await promise
+    const result: [null, T] = [null, data]
+    return result
+  } catch (err: any) {
+    const result: [U, undefined] = [Object.assign({}, err, errorContext), undefined]
+    return result
+  }
+}

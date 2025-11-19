@@ -113,7 +113,7 @@ export function mount(Component: Component, props?: Record<string, any>) {
   return instance
 }
 
-export function appendChild(child: Element, id = useNamespace('container')) {
+export function appendChild(child: Element, id: string = useNamespace('container').toString()) {
   if (!child) {
     return
   }

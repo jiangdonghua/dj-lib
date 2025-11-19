@@ -4,9 +4,9 @@
  */
 
 export function px2rem(px: string, postcssRootValue: number = 50) {
-	if (/%/gi.test(px)) {
-		return px;
-	} else {
-		return parseFloat(px) / postcssRootValue + 'rem';
-	}
+  if (/%/gi.test(px)) {
+    return px
+  } else {
+    return parseFloat(px) / postcssRootValue + 'rem'
+  }
 }

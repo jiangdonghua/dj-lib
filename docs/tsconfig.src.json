@@ -2,6 +2,8 @@
   "extends": "../tsconfig.base.json",
   "compilerOptions": {
     "baseUrl": ".",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "types": ["vite/client", "vitepress"],
     "paths": {
       "@dj-lib/web-ui": ["../packages/web-ui/packages"],
       "@dj-lib/shared": ["../packages/shared/src"],

@@ -1,17 +1,17 @@
-import { getRootFontSize } from './fontSize';
+import { getRootFontSize } from './fontSize'
 
 export function unitToPx(value: number | string): number {
-	if (typeof value === 'number') {
-		return value;
-	}
+  if (typeof value === 'number') {
+    return value
+  }
 
-	if (typeof window !== 'undefined') {
-		if (value.includes('rem')) {
-			return rem2px(value);
-		}
-	}
+  if (typeof window !== 'undefined') {
+    if (value.includes('rem')) {
+      return rem2px(value)
+    }
+  }
 
-	return parseFloat(value);
+  return parseFloat(value)
 }
 
 /**
@@ -20,6 +20,6 @@ export function unitToPx(value: number | string): number {
  * @returns
  */
 export function rem2px(value: string) {
-	value = value.replace(/rem/g, '');
-	return +value * getRootFontSize();
+  value = value.replace(/rem/g, '')
+  return +value * getRootFontSize()
 }

@@ -1,2 +1,2 @@
-export * from './raf';
-export * from './history';
+export * from './raf'
+export * from './history'

@@ -10,6 +10,30 @@
 button/basic
 :::
 
+## 默认导入方式
+
+你也可以使用默认导入方式来使用组件库：
+
+```js
+import WebUI from '@dj-lib/web-ui'
+```
+
+然后在 Vue 应用中注册，prefix 参数是可选的：
+
+```js
+// 使用自定义前缀
+app.use(WebUI, { prefix: 'En' })
+
+// 或者使用默认前缀（'en'）
+app.use(WebUI)
+```
+
+### 使用自定义前缀（En）
+
+:::
+
+### 使用默认前缀（en）
+
 ## API
 
 ### Props
